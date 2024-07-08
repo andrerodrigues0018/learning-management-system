@@ -11,15 +11,16 @@ input {
 }
 
 .main-container{
-  /* justify-content: center;
-  display: flex; */
+  /* justify-content: center; */
+  /* display: flex;  */
   /* width: 100vw; */
+  /* background-color: red; */
+  
 }
 
 .TabsRoot {
   display: flex;
   flex-direction: column;
-  /* width: 500px; */
 
   align-self: center;
   align-items: center ;
@@ -33,7 +34,7 @@ input {
 
   /* flex-shrink: 0; */
   display: flex;
-  width: 30%; 
+  width: 20%; 
   border-bottom: 1px solid var(--mauve-6);
 }
 
@@ -64,7 +65,7 @@ input {
 .TabsContent {
   flex-grow: 1;
   padding: 20px;
-  width: 100%;
+  width: 80%;
   height: 70vh;
   margin-top: 25px;
   border-radius: 5px;

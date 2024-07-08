@@ -1,7 +1,7 @@
 
-import { Theme, Container } from '@radix-ui/themes';
+import { Theme } from '@radix-ui/themes';
 import * as Tabs from '@radix-ui/react-tabs';
-
+import Student from './pages/student';
 import './App.css';
 
 
@@ -11,7 +11,6 @@ function App() {
   return (
     <>
       <Theme accentColor="green" appearance='dark' grayColor="sand" radius="large">
-        <Container className='main-container'>
           <Tabs.Root className="TabsRoot" defaultValue="tab-student">
             
               <Tabs.List className="TabsList" >
@@ -25,11 +24,7 @@ function App() {
 
 
             <Tabs.Content className="TabsContent" value="tab-student">
-              <p className="Text">Visão do estudante</p>
-
-              <div style={{ display: 'flex', marginTop: 20, justifyContent: 'flex-end' }}>
-                <button className="Button green">Save changes</button>
-              </div>
+              <Student/>
             </Tabs.Content>
 
             <Tabs.Content className="TabsContent" value="tab-adm">
@@ -42,7 +37,6 @@ function App() {
               </div>
             </Tabs.Content>
           </Tabs.Root>
-        </Container>
 
         {/* <ThemePanel></ThemePanel> */}
       </Theme>
