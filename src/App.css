@@ -1,42 +1,108 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import '@radix-ui/colors/black-alpha.css';
+@import '@radix-ui/colors/green.css';
+@import '@radix-ui/colors/mauve.css';
+@import '@radix-ui/colors/violet.css';
+
+/* reset */
+button,
+fieldset,
+input {
+  all: unset;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.main-container{
+  /* justify-content: center;
+  display: flex; */
+  /* width: 100vw; */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.TabsRoot {
+  display: flex;
+  flex-direction: column;
+  /* width: 500px; */
+
+  align-self: center;
+  align-items: center ;
+  /* background-color: blue; */
+
+  /* box-shadow: 0 2px 10px var(--black-a4); */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.TabsList {
+  /* background-color: red;; */
+
+  /* flex-shrink: 0; */
+  display: flex;
+  width: 30%; 
+  border-bottom: 1px solid var(--mauve-6);
 }
 
-.card {
-  padding: 2em;
+.TabsTrigger {
+  font-family: inherit;
+  /* background-color: white; */
+  padding: 0 20px;
+  height: 45px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  line-height: 1;
+  color: var(--mauve-11);
+  user-select: none;
+  cursor: pointer;
 }
 
-.read-the-docs {
-  color: #888;
+.TabsTrigger[data-state='active'] {
+  color: var(--violet-11);
+  box-shadow: inset 0 -1px 0 0 currentColor, 0 1px 0 0 currentColor;
+}
+.TabsTrigger:focus {
+  position: relative;
+  /* box-shadow: 0 0 0 2px black; */
+}
+
+.TabsContent {
+  flex-grow: 1;
+  padding: 20px;
+  width: 100%;
+  height: 70vh;
+  margin-top: 25px;
+  border-radius: 5px;
+  /* background-color: white; */
+  border:1px solid var(--violet-11);
+  outline: none;
+}
+
+
+/* .Text {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--mauve-11);
+  font-size: 15px;
+  line-height: 1.5;
+} */
+
+
+
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 500;
+  height: 35px;
+}
+.Button.green {
+  background-color: var(--green-4);
+  color: var(--green-11);
+}
+.Button.green:hover {
+  background-color: var(--green-5);
+}
+.Button.green:focus {
+  box-shadow: 0 0 0 2px var(--green-7);
 }
