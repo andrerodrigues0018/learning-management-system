@@ -1,15 +1,13 @@
 
-// import { Theme, Container } from '@radix-ui/themes';
-// import * as Tabs from '@radix-ui/react-tabs';
 
-// import './App.css';
-
+import DropdownMenuDemo from "../components/DropdownMenuDemo"
 
 function Student() {
 
 
   return (
     <>
+        <DropdownMenuDemo/>
         <div>ola</div>
     </>
   )
