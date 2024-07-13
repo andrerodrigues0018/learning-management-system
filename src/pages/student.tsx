@@ -11,8 +11,8 @@ function Student() {
   return (
     <>
       <DropdownMenuDemo />
-      <div>ola</div>
-      <div style={ { 'width': '500px' }}> <Player/></div>
+      <p>a</p>
+      <div style={ { 'width': '550px' }}> <Player/></div>
 
     </>
   )

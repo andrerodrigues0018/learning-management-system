@@ -14,7 +14,7 @@
     --media-slider-height: 40px;
     --media-slider-preview-offset: 32px;
     margin-left: 1.5px;
-    max-width: 80px;
+    max-width: 60px;
   }
   
   .controls :global(.vds-time-group) {

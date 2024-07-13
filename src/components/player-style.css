@@ -1,7 +1,7 @@
 
 .player[data-view-type='video'] {
-  --media-tooltip-y-offset: 30px;
-  --media-menu-y-offset: 30px;
+  --media-tooltip-y-offset: 10px;
+  --media-menu-y-offset: 10px;
   --media-border-radius: 6px;
   aspect-ratio: 16 /9;
   background-color: #212121;
@@ -14,11 +14,15 @@
   border-radius: var(--media-border-radius);
 }
 
+.vds-button{
+  width: 5px!important;
+}
+
 .srcButtons {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   margin-top: 40px;
   margin-inline: auto;
-  max-width: 300px;
+  max-width: 20px;
 }
