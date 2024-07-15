@@ -1,7 +1,7 @@
 
 import { Theme } from '@radix-ui/themes';
 import * as Tabs from '@radix-ui/react-tabs';
-import Student from './pages/student';
+import Student from './pages/student/student';
 import './App.css';
 
 

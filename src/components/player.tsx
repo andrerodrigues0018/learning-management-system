@@ -16,7 +16,7 @@ import { VideoLayout } from './layouts/video-layout';
 
 
 export function Player() {
-  let player = useRef<MediaPlayerInstance>(null),
+  const player = useRef<MediaPlayerInstance>(null),
     [src, setSrc] = useState(''),
     [viewType, setViewType] = useState<MediaViewType>('unknown');
 
@@ -26,7 +26,7 @@ export function Player() {
 
     // Subscribe to state updates.
     return player.current!.subscribe(({ paused, viewType }) => {
-      // console.log('is paused?', '->', paused);
+      console.log('is paused?', '->', paused);
       setViewType(viewType);
     });
   }, []);
