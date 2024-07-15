@@ -1,0 +1,14 @@
+div#elements{
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    display: flex;
+}
+
+div#elements .element{
+    width: 50%;
+    margin:0;
+    height: 200px;
+    background: white;
+}

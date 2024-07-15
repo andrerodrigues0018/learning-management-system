@@ -52,8 +52,6 @@ export function Player() {
         </MediaProvider>
         <VideoLayout thumbnails="https://files.vidstack.io/sprite-fight/thumbnails.vtt" />
       </MediaPlayer>
-
- 
     </>
   );
 }
