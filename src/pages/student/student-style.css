@@ -6,6 +6,16 @@ div#elements{
     display: flex;
 }
 
+#elements.Default{
+    background-color: red;
+}
+#elements.Comfortable{
+    background-color: blue;
+}
+#elements.Compact{
+    background-color: violet;
+}
+
 div#elements .element{
     width: 50%;
     margin:0;
