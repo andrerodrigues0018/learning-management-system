@@ -24,8 +24,8 @@ function Student() {
 
   return (
     <>
-      <DropdownMenuDemo />
-      <p>a</p>
+      {/* <DropdownMenuDemo />
+      <p>a</p> */}
       <Flex align="start" direction="row" gap="5">
         {layoutOptions.map((option) => (
           <Flex asChild gap="2" key={option.value}>

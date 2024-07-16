@@ -1,12 +1,11 @@
 div#elements{
-    background-color: red;
     height: 100%;
     width: 100%;
-    overflow: scroll;
+    /* overflow: scroll; */
     display: flex;
 }
 
-#elements.Default{
+/* #elements.Default{
     background-color: red;
 }
 #elements.Comfortable{
@@ -14,11 +13,28 @@ div#elements{
 }
 #elements.Compact{
     background-color: violet;
-}
+} */
 
 div#elements .element{
     width: 50%;
     margin:0;
-    height: 200px;
-    background: white;
+    max-height: 800px;
+    /* overflow: scroll; */
+    /* background: white; */
+}
+
+#elements.Comfortable #player-layout {
+    width: 40%;
+}
+
+#elements.Comfortable #iframe-layout {
+    width: 60%;
+}
+
+#elements.Compact #player-layout {
+    width: 30%;
+}
+
+#elements.Compact #iframe-layout {
+    width: 70%;
 }
