@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Flex, Text, Radio } from "@radix-ui/themes";
-import DropdownMenuDemo from "../../components/DropdownMenuDemo";
+// import DropdownMenuDemo from "../../components/DropdownMenuDemo";
 import { Player } from "../../components/player";
 import './student-style.css';
 
@@ -24,8 +24,6 @@ function Student() {
 
   return (
     <>
-      {/* <DropdownMenuDemo />
-      <p>a</p> */}
       <Flex align="start" direction="row" gap="5">
         {layoutOptions.map((option) => (
           <Flex asChild gap="2" key={option.value}>
