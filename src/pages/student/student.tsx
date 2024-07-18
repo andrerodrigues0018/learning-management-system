@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Flex, Text, Radio } from "@radix-ui/themes";
+import { Flex, Text, Radio, Box, Avatar, Card } from "@radix-ui/themes";
 // import DropdownMenuDemo from "../../components/DropdownMenuDemo";
 import { Player } from "../../components/player";
 import './student-style.css';
@@ -24,6 +24,7 @@ function Student() {
 
   return (
     <>
+
       <Flex align="start" direction="row" gap="5">
         {layoutOptions.map((option) => (
           <Flex asChild gap="2" key={option.value}>
@@ -47,6 +48,30 @@ function Student() {
           <iframe src="https://stackblitz.com/edit/vidstack-examples-sjm3aw?embed=1&file=README.md"></iframe>
         </div>
       </Flex>
+      <Flex id="card-section">
+        <Box maxWidth="240px">
+          <Card>
+            <Flex gap="3" align="center">
+              <Avatar
+                size="3"
+                src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?&w=64&h=64&dpr=2&q=70&crop=focalpoint&fp-x=0.67&fp-y=0.5&fp-z=1.4&fit=crop"
+                radius="full"
+                fallback="T"
+              />
+              <Box>
+                <Text as="div" size="2" weight="bold">
+                  Teodros Girmay
+                </Text>
+                <Text as="div" size="2" color="gray">
+                  Engineering
+                </Text>
+              </Box>
+            </Flex>
+          </Card>
+        </Box>
+      </Flex>
+
+
     </>
   );
 }
