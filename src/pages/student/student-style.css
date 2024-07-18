@@ -19,7 +19,6 @@ div#elements .element{
     width: 50%;
     margin:0;
     /* overflow: scroll; */
-    background: white;
 }
 
 #elements.Comfortable #player-layout {
@@ -39,4 +38,10 @@ div#elements .element{
 
 #elements.Compact #iframe-layout {
     width: 70%;
+}
+#card-section .card-box{
+    transition: 1s;
+}
+#card-section .card-box:hover{
+    background-color: red;
 }
