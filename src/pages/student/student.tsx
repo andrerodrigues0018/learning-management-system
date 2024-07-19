@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Flex, Text, Radio, Box, Avatar, Card } from "@radix-ui/themes";
 // import DropdownMenuDemo from "../../components/DropdownMenuDemo";
 import { Player } from "../../components/player";
+import { Game } from "../../components/game";
+
 import './student-style.css';
 
 interface LayoutOptions {
@@ -40,14 +42,17 @@ function Student() {
           </Flex>
         ))}
       </Flex>
+
       <Flex id="elements" className={`${selectedLayout}`}>
         <div id="player-layout" className="element">
-          <Player />
+          {/* <Player /> */}
+          <Game/>
         </div>
         <div id="iframe-layout" className="element">
-          <iframe src="https://stackblitz.com/edit/vidstack-examples-sjm3aw?embed=1&file=README.md"></iframe>
+          {/* <iframe src="https://stackblitz.com/edit/vidstack-examples-sjm3aw?embed=1&file=README.md"></iframe> */}
         </div>
       </Flex>
+
       <Flex id="card-section" gap="2">
         <Box maxWidth="260px" >
           <Card className='card-box'>
