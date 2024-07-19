@@ -16,13 +16,15 @@ div#elements{
 } */
 
 div#elements .element{
-    width: 50%;
+    /* width: 50%; */
     margin:0;
     min-height: 400px;
     /* overflow: scroll; */
     border:1px solid grey;
 }
-
+#elements.Default .element{
+    width: 50%;
+}
 #elements.Comfortable #player-layout {
     width: 40%;
     height: auto;

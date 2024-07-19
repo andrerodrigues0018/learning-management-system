@@ -19,6 +19,9 @@ const layoutOptions: LayoutOptions[] = [
 
 function Student() {
   const [selectedLayout, setSelectedLayout] = useState<string>(layoutOptions[0].value); // Initial state
+  const [playerVisible, setPlayerVisible] = useState(true);
+  const [codeVisibile, setCodeVisible] = useState(false);
+  const [gameVisible, setGameVisible] = useState(true);
 
   const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedLayout(event.target.value);
@@ -46,10 +49,13 @@ function Student() {
       <Flex id="elements" className={`${selectedLayout}`}>
         <div id="player-layout" className="element">
           {/* <Player /> */}
-          <Game/>
+          {playerVisible && <Player />}
         </div>
-        <div id="iframe-layout" className="element">
-          {/* <iframe src="https://stackblitz.com/edit/vidstack-examples-sjm3aw?embed=1&file=README.md"></iframe> */}
+        <div id="game-layout" className="element">
+          {gameVisible && <Game />}
+          
+          {codeVisibile && <iframe src="https://stackblitz.com/edit/vidstack-examples-sjm3aw?embed=1&file=README.md"></iframe>}
+          {/*  */}
         </div>
       </Flex>
 
