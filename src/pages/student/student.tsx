@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Flex, Text, Radio, Box, Avatar, Card } from "@radix-ui/themes";
-// import DropdownMenuDemo from "../../components/DropdownMenuDemo";
+import { Flex, Text, Radio } from "@radix-ui/themes";
+import data from './data.json';
+import { CourseCard } from "../../components/course";
 import { Player } from "../../components/player";
 import { Game } from "../../components/game";
 
@@ -17,11 +18,27 @@ const layoutOptions: LayoutOptions[] = [
   { value: 'Compact', label: 'Compact' },
 ];
 
+
+interface CardData {
+  tituloAula: string;
+  materia: string;
+  fotoProfessor: string;
+  outrasInformacoes: {
+    descricao: string;
+    data: string;
+    horario: string;
+  };
+}
+
+// Assuming your JSON data is directly assigned to a variable named 'data'
+
 function Student() {
   const [selectedLayout, setSelectedLayout] = useState<string>(layoutOptions[0].value); // Initial state
-  const [playerVisible, setPlayerVisible] = useState(true);
+  const [playerVisible, setPlayerVisible] = useState(false);
   const [codeVisibile, setCodeVisible] = useState(false);
-  const [gameVisible, setGameVisible] = useState(true);
+  const [gameVisible, setGameVisible] = useState(false);
+  const cards: CardData[] = data;
+  console.log(cards)
 
   const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedLayout(event.target.value);
@@ -58,51 +75,14 @@ function Student() {
           {/*  */}
         </div>
       </Flex>
-
       <Flex id="card-section" gap="2">
-        <Box maxWidth="260px" >
-          <Card className='card-box'>
-            <Flex gap="2" align="center">
-              <Avatar
-                size="3"
-                src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?&w=64&h=64&dpr=2&q=70&crop=focalpoint&fp-x=0.67&fp-y=0.5&fp-z=1.4&fit=crop"
-                radius="full"
-                fallback="T"
-              />
-              <Box>
-                <Text as="div" size="2" weight="medium">
-                  1. Engenharia de software
-                </Text>
-                <Text as="div" size="1" color="gray">
-                  Entendendo conceitos basicos
-                </Text>
-              </Box>
-            </Flex>
-          </Card>
-        </Box>
-        <Box maxWidth="260px" >
-          <Card className='card-box'>
-            <Flex gap="2" align="center">
-              <Avatar
-                size="3"
-                src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?&w=64&h=64&dpr=2&q=70&crop=focalpoint&fp-x=0.67&fp-y=0.5&fp-z=1.4&fit=crop"
-                radius="full"
-                fallback="T"
-              />
-              <Box>
-                <Text as="div" size="2" weight="medium">
-                  2. Desafio
-                </Text>
-                <Text as="div" size="1" color="gray">
-                  Mudando variaveis
-                </Text>
-              </Box>
-            </Flex>
-          </Card>
-        </Box>
+        {cards.map((card) => (
+          <>
+            <CourseCard card={card}/>
+          </>
+          // Pass data as props
+        ))}
       </Flex>
-
-
     </>
   );
 }

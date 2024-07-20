@@ -1,0 +1,22 @@
+[
+    {
+      "tituloAula": "Introdução ao React",
+      "materia": "React",
+      "fotoProfessor": "https://www.exemplo.com/foto-professor1.jpg",
+      "outrasInformacoes": {
+        "descricao": "Aprenda os conceitos básicos do React e como criar sua primeira aplicação.",
+        "data": "2024-07-20",
+        "horario": "19:00"
+      }
+    },
+    {
+      "tituloAula": "Conceitos Básicos do HTML",
+      "materia": "Desenvolvimento Web",
+      "fotoProfessor": "https://www.exemplo.com/foto-professor2.jpg",
+      "outrasInformacoes": {
+        "descricao": "Entenda as tags e estruturas HTML para construir páginas web.",
+        "data": "2024-07-21",
+        "horario": "10:00"
+      }
+    }
+  ]
