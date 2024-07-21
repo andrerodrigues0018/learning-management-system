@@ -20,9 +20,11 @@ const layoutOptions: LayoutOptions[] = [
 
 
 interface CardData {
+  numero: number,
   tituloAula: string;
   materia: string;
   fotoProfessor: string;
+  active: boolean;
   outrasInformacoes: {
     descricao: string;
     data: string;
@@ -30,15 +32,12 @@ interface CardData {
   };
 }
 
-// Assuming your JSON data is directly assigned to a variable named 'data'
-
 function Student() {
   const [selectedLayout, setSelectedLayout] = useState<string>(layoutOptions[0].value); // Initial state
   const [playerVisible, setPlayerVisible] = useState(false);
   const [codeVisibile, setCodeVisible] = useState(false);
   const [gameVisible, setGameVisible] = useState(false);
   const cards: CardData[] = data;
-  console.log(cards)
 
   const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedLayout(event.target.value);
@@ -72,15 +71,13 @@ function Student() {
           {gameVisible && <Game />}
           
           {codeVisibile && <iframe src="https://stackblitz.com/edit/vidstack-examples-sjm3aw?embed=1&file=README.md"></iframe>}
-          {/*  */}
         </div>
       </Flex>
       <Flex id="card-section" gap="2">
         {cards.map((card) => (
-          <>
-            <CourseCard card={card}/>
-          </>
-          // Pass data as props
+            <div onClick={ () => { console.log( "oi ")}}>
+              <CourseCard {...card} />
+            </div>
         ))}
       </Flex>
     </>

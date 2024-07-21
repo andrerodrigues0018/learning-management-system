@@ -1,7 +1,9 @@
 [
     {
+      "numero": 1,
       "tituloAula": "Introdução ao React",
       "materia": "React",
+      "active": true,
       "fotoProfessor": "https://www.exemplo.com/foto-professor1.jpg",
       "outrasInformacoes": {
         "descricao": "Aprenda os conceitos básicos do React e como criar sua primeira aplicação.",
@@ -10,8 +12,10 @@
       }
     },
     {
+      "numero": 2,
       "tituloAula": "Conceitos Básicos do HTML",
       "materia": "Desenvolvimento Web",
+      "active": false,
       "fotoProfessor": "https://www.exemplo.com/foto-professor2.jpg",
       "outrasInformacoes": {
         "descricao": "Entenda as tags e estruturas HTML para construir páginas web.",
