@@ -26,7 +26,7 @@ export function CourseCard(card: CardData): JSX.Element {
                         />
                         <Box>
                             <Text as="div" size="2" weight="medium">
-                        { active }
+                        { active ? "oi" : "tchau" }
                         {numero}. {materia}
                             </Text>
                             <Text as="div" size="1" color="gray">

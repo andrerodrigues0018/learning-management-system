@@ -75,7 +75,7 @@ function Student() {
       </Flex>
       <Flex id="card-section" gap="2">
         {cards.map((card) => (
-            <div onClick={ () => { console.log( "oi ")}}>
+            <div onClick={ () => { console.log( card )}}>
               <CourseCard {...card} />
             </div>
         ))}
