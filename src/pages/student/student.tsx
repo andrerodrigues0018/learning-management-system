@@ -37,6 +37,7 @@ function Student() {
   const [playerVisible, setPlayerVisible] = useState(false);
   const [codeVisibile, setCodeVisible] = useState(false);
   const [gameVisible, setGameVisible] = useState(false);
+  const [contentId, setContentId] = useState(1);
   const cards: CardData[] = data;
 
   const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -75,8 +76,8 @@ function Student() {
       </Flex>
       <Flex id="card-section" gap="2">
         {cards.map((card) => (
-            <div onClick={ () => { console.log( card )}}>
-              <CourseCard {...card} />
+            <div onClick={ () => { setContentId(card.numero) }}>
+              <CourseCard {...card } contentId={contentId} />
             </div>
         ))}
       </Flex>

@@ -52,6 +52,6 @@ div#elements .element{
     transition: 1s;
     cursor: pointer;
 }
-#card-section .card-box:hover{
+#card-section .card-box:hover, .card-box.card-active{
     background-color: aquamarine;
 }

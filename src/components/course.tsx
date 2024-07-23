@@ -10,13 +10,14 @@ interface CardData {
         data: string;
         horario: string;
     };
+    contentId?: number;
 }
 export function CourseCard(card: CardData): JSX.Element {
-    const { materia, numero, tituloAula, active } = card;
+    const { materia, numero, tituloAula, contentId } = card;
     return (
         <>
             <Box maxWidth="260px" >
-                <Card className='card-box' >
+                <Card className={ `card-box ${ ( contentId == numero) ? 'card-active' : '' }` } >
                     <Flex gap="2" align="center">
                         <Avatar
                             size="3"
@@ -26,8 +27,8 @@ export function CourseCard(card: CardData): JSX.Element {
                         />
                         <Box>
                             <Text as="div" size="2" weight="medium">
-                        { active ? "oi" : "tchau" }
-                        {numero}. {materia}
+
+                                {numero}. {materia}
                             </Text>
                             <Text as="div" size="1" color="gray">
                                 {tituloAula}
