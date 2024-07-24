@@ -5,10 +5,10 @@ interface CardData {
     materia: string;
     active: boolean;
     fotoProfessor: string;
-    outrasInformacoes: {
-        descricao: string;
-        data: string;
-        horario: string;
+    content: {
+        video_url: string;
+        iframe_url: string;
+        game_url: string;
     };
     contentId?: number;
 }
