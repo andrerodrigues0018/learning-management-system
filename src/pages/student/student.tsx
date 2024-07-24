@@ -56,19 +56,6 @@ function Student() {
     setContentId(contentNumber)
   };
 
-  // const update
-  
-// useEffect(() => {
-//   // Initialize src.
-//   const selectContent = cards.find( card => card.numero = contentId );
-//   console.log(selectContent)
-//   // if()
-
-//   // Subscribe to state updates.
-//   return console.log('is updated?', '->', contentId);
-
-// }, [contentId]);
-
   return (
     <>
 
