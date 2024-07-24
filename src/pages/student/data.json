@@ -5,10 +5,10 @@
       "materia": "React",
       "active": true,
       "fotoProfessor": "https://www.exemplo.com/foto-professor1.jpg",
-      "outrasInformacoes": {
-        "descricao": "Aprenda os conceitos básicos do React e como criar sua primeira aplicação.",
-        "data": "2024-07-20",
-        "horario": "19:00"
+      "content": {
+        "video_url": "https://dnc-lms-bucket.s3.amazonaws.com/videos/formacao-em-dados/Aula 02 - Ambientacao.mp4",
+        "iframe_url": "https://stackblitz.com/edit/vidstack-examples-sjm3aw?embed=1&file=README.md",
+        "game_url": ""
       }
     },
     {
@@ -17,10 +17,10 @@
       "materia": "Desenvolvimento Web",
       "active": false,
       "fotoProfessor": "https://www.exemplo.com/foto-professor2.jpg",
-      "outrasInformacoes": {
-        "descricao": "Entenda as tags e estruturas HTML para construir páginas web.",
-        "data": "2024-07-21",
-        "horario": "10:00"
+      "content": {
+        "video_url": "",
+        "iframe_url": "",
+        "game_url": "https://view.genially.com/669726733037eb3b9d401fd1"
       }
     }
   ]

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Flex, Text, Radio } from "@radix-ui/themes";
 import data from './data.json';
 import { CourseCard } from "../../components/course";
@@ -25,10 +25,10 @@ interface CardData {
   materia: string;
   fotoProfessor: string;
   active: boolean;
-  outrasInformacoes: {
-    descricao: string;
-    data: string;
-    horario: string;
+  content: {
+    video_url: string;
+    iframe_url: string;
+    game_url: string;
   };
 }
 
@@ -43,6 +43,31 @@ function Student() {
   const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedLayout(event.target.value);
   };
+
+  const setContent = (contentNumber: number) => {
+
+    const card = cards.find( card => contentNumber == card.numero )
+    const isPlayerVisible = ( card?.content.video_url ) ? true : false;
+    setPlayerVisible(isPlayerVisible)
+    const gameVisible = ( card?.content.game_url ) ? true : false;
+    setGameVisible(gameVisible)
+    const isCodeVisible = ( card?.content.iframe_url ) ? true : false;
+    setCodeVisible(isCodeVisible)
+    setContentId(contentNumber)
+  };
+
+  // const update
+  
+// useEffect(() => {
+//   // Initialize src.
+//   const selectContent = cards.find( card => card.numero = contentId );
+//   console.log(selectContent)
+//   // if()
+
+//   // Subscribe to state updates.
+//   return console.log('is updated?', '->', contentId);
+
+// }, [contentId]);
 
   return (
     <>
@@ -64,19 +89,23 @@ function Student() {
       </Flex>
 
       <Flex id="elements" className={`${selectedLayout}`}>
-        <div id="player-layout" className="element">
-          {/* <Player /> */}
-          {playerVisible && <Player />}
-        </div>
+        { playerVisible &&
+          <div id="player-layout" className="element">
+            {/* <Player /> */}
+            <Player />
+          </div>
+        }
+        { ( gameVisible || codeVisibile ) &&
         <div id="game-layout" className="element">
           {gameVisible && <Game />}
           
           {codeVisibile && <iframe src="https://stackblitz.com/edit/vidstack-examples-sjm3aw?embed=1&file=README.md"></iframe>}
         </div>
+        }
       </Flex>
       <Flex id="card-section" gap="2">
         {cards.map((card) => (
-            <div onClick={ () => { setContentId(card.numero) }}>
+            <div onClick={ () => { setContent(card.numero) } }>
               <CourseCard {...card } contentId={contentId} />
             </div>
         ))}
