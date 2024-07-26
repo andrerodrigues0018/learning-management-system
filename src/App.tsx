@@ -28,7 +28,7 @@ function App() {
           </Tabs.Content>
 
           <Tabs.Content className="TabsContent" value="tab-adm">
-                <iframe title="Fill in the blanks game" frameborder="0" width="1200" height="675"  src="https://view.genially.com/669726733037eb3b9d401fd1" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> 
+                <iframe title="Fill in the blanks game" width="1200" height="675"  src="https://view.genially.com/669726733037eb3b9d401fd1" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> 
           </Tabs.Content>
         </Tabs.Root>
 

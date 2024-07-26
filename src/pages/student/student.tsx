@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Flex, Text, Radio } from "@radix-ui/themes";
 import data from './data.json';
 import { CourseCard } from "../../components/course";
@@ -55,6 +55,12 @@ function Student() {
     setCodeVisible(isCodeVisible)
     setContentId(contentNumber)
   };
+
+  useEffect(() => {
+
+  setContent(cards[0].numero)
+  }, [ cards ]); 
+
 
   return (
     <>
