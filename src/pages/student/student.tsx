@@ -84,7 +84,6 @@ function Student() {
       <Flex id="elements" className={`${selectedLayout}`}>
         { playerVisible &&
           <div id="player-layout" className="element">
-            {/* <Player /> */}
             <Player />
           </div>
         }
