@@ -4,6 +4,8 @@ Objetivo do projeto: Aperfeiçoar meus conhecimentos em criações de plataforma
 
 Coisas que penso em fazer aqui:
 - Testar novos "modos" de assistir aula.
+- Salvar configurações de player
+- Continuar video de onde parei 
 - Testar ferramentas de gamificadas
 - Testar ferramentas de código
 - Testar ferramentas de formulario
