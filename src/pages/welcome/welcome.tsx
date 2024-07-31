@@ -1,7 +1,6 @@
-import { Theme, Flex, Text } from '@radix-ui/themes';
+import { Theme, Flex, Text, Button } from '@radix-ui/themes';
 import './welcome.css'
 import codeschool from '../../assets/codeschool.svg';
-import * as Checkbox from '@radix-ui/react-checkbox';
 import { CheckIcon, RocketIcon, MixIcon } from '@radix-ui/react-icons';
 
 function Welcome() {
@@ -25,7 +24,7 @@ function Welcome() {
                         <Flex id='account-options'>
                             <Flex className='option'>
                                 <div className='option-img'>
-                                    <RocketIcon/>
+                                    <RocketIcon />
                                 </div>
                                 <Flex className='option-text'>
                                     <Text className='option-text-title'>I'm a teacher</Text>
@@ -33,13 +32,13 @@ function Welcome() {
                                 </Flex>
                                 <Flex className='option-checkbox'>
                                     <div className='checkbox-item '>
-                                        <CheckIcon/>
+                                        <CheckIcon />
                                     </div>
                                 </Flex>
                             </Flex>
                             <Flex className='option'>
                                 <div className='option-img'>
-                                    <MixIcon/>
+                                    <MixIcon />
                                 </div>
                                 <Flex className='option-text'>
                                     <Text className='option-text-title'>I'm a student</Text>
@@ -48,15 +47,18 @@ function Welcome() {
                                 {/* <img className='option-checkbox' /> */}
                                 <Flex className='option-checkbox'>
                                     <div className='checkbox-item checked-item'>
-                                        <CheckIcon/>
+                                        <CheckIcon />
                                     </div>
                                 </Flex>
                             </Flex>
                         </Flex>
 
                         <Flex id="right-side-actions">
-                            <Text className='action-login'>Already have an account? <a href=''>Log In</a></Text>
-                            <a className='action-register' href=''>Continuar</a>
+                            <Text className='action-login'>Already have an account? <a href='/login'>Log In</a></Text>
+
+                            <Button variant='soft' color='blue' loading={false}>
+                                Choose <CheckIcon />
+                            </Button>
                         </Flex>
 
 
