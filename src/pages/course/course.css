@@ -1,6 +1,45 @@
 .AccordionChevron {
-transition: transform 300ms;
+    transition: transform 300ms;
 }
 .AccordionTrigger[data-state='open'] > .AccordionChevron {
-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.AccordionTrigger[data-state="open"] {
+    /* Estilos para quando data-state for "open" */
+    /* background-color: lightblue;
+    border: 2px solid blue; */
+}
+
+
+
+#side-menu{
+    width: 300px;
+    background-color: rgba(100, 100, 100, 0.1);
+    height: 100vh;
+}
+
+#side-menu #menu-logo{
+    width: 100px;
+    align-self: center;
+    margin-top: 70px;
+}
+
+#menu-items{
+    /* background-color: red; */
+    margin-top: 70px;
+}
+
+
+.AccordionItem{
+    /* width: 100vw; */
+    padding-left: 35px;
+    border-left: 3px solid orange;
+    /* border-radius: 2px; */
+    margin: 30px 0;
+    /* background-color: red; */
+}
+
+.AccordionItem .header-icon{
+    background-color: red;
 }

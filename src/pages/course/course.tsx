@@ -10,28 +10,43 @@ function Course() {
         <>
             <Theme accentColor="blue" appearance='dark' grayColor="sand" radius="large">
 
-                <Flex id='side-menu'>
-                    <img id="menu-logo" />
-                    <Accordion.Root type="single" collapsible>
-                        <Accordion.Item value="item-1">
+                <Flex id='side-menu' direction={'column'} >
+                    <img id="menu-logo" src='/vite.svg'/>
+                    <Accordion.Root type="multiple" aria-expanded="false" id='menu-items'>
+                        <Accordion.Item value="menu-item-dashboard" className="AccordionItem">
                             <Accordion.Header>
+                                <RocketIcon className="header-icon" aria-hidden />
+
                                 <Accordion.Trigger className="AccordionTrigger">
                                     <span>Dashboard</span>
                                 </Accordion.Trigger>
                             </Accordion.Header>
                         </Accordion.Item>
-                        <Accordion.Item value="item-2">
+                        <Accordion.Item value="menu-item-certificates" className="AccordionItem">
+                            <Accordion.Header>
+                                <span>Certificates</span>
+                            </Accordion.Header>
+                        </Accordion.Item>
+                        <Accordion.Item value="menu-item-courses" className="AccordionItem">
                             <Accordion.Header>
                                 <Accordion.Trigger className="AccordionTrigger">
-                                    <span>Trigger text</span>
+                                    <span>My Courses</span>
                                     <ChevronDownIcon className="AccordionChevron" aria-hidden />
                                 </Accordion.Trigger>
                             </Accordion.Header>
-                            <Accordion.Content>AA</Accordion.Content>
-                            <Accordion.Content>AA</Accordion.Content>
+                            <Accordion.Content>Python</Accordion.Content>
                         </Accordion.Item>
                     </Accordion.Root>
-                    <Flex id="menu-more-options"></Flex>
+                    <Flex id="menu-more-options" direction={'column'}>
+                        <Flex className='more-option' align={'center'}>
+                            <MixIcon/>
+                            <p>Settings</p>
+                        </Flex>
+                        <Flex className='more-option' align={'center'}>
+                            <MixIcon/>
+                            <p>Settings</p>
+                        </Flex>
+                    </Flex>
                 </Flex>
             </Theme>
         </>
