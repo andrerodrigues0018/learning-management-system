@@ -1,6 +1,7 @@
 import { Theme, Flex } from '@radix-ui/themes';
 import * as Accordion from '@radix-ui/react-accordion';
 import './course.css'
+import { Learn } from '../../components/learn/learn';
 import codeschool from '../../assets/codeschool.svg';
 import { ChevronDownIcon, DotFilledIcon, HomeIcon,  Crosshair2Icon, CardStackMinusIcon, PersonIcon, MixerVerticalIcon, IdCardIcon } from '@radix-ui/react-icons';
 
@@ -71,7 +72,7 @@ function Course() {
                         </Flex>
                     </Flex>
                     <Flex id="content">
-
+                        <Learn/>
                     </Flex>
                 </Flex>
             </Theme>
