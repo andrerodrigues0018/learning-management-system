@@ -1,4 +1,6 @@
 import { Theme, Flex } from '@radix-ui/themes';
+import { useState } from 'react';
+
 import * as Accordion from '@radix-ui/react-accordion';
 import './course.css'
 import { Learn } from '../../components/learn/learn';
@@ -7,6 +9,8 @@ import { ChevronDownIcon, DotFilledIcon, HomeIcon,  Crosshair2Icon, CardStackMin
 
 
 function Course() {
+    const [page, setPage ] = useState('');
+
     return (
         <>
             <Theme accentColor="blue" appearance='dark' grayColor="sand" radius="large">
@@ -14,7 +18,7 @@ function Course() {
                     <Flex id='side-menu' direction={'column'} >
                         <img id="menu-logo" src={codeschool}/>
                         <Accordion.Root type="single" aria-expanded="false" collapsible={false} id='menu-items'>
-                            <Accordion.Item value="menu-item-dashboard" className="AccordionItem">
+                            <Accordion.Item value="menu-item-dashboard" className="AccordionItem" onClick={() => {setPage('Learn')}}>
                                 <Accordion.Header>
                                     <Accordion.Trigger className="AccordionTrigger">
                                         <HomeIcon className="header-icon" aria-hidden />
@@ -23,7 +27,7 @@ function Course() {
                                     </Accordion.Trigger>
                                 </Accordion.Header>
                             </Accordion.Item>
-                            <Accordion.Item value="menu-item-courses" className="AccordionItem">
+                            <Accordion.Item value="menu-item-courses" className="AccordionItem" >
                                 <Accordion.Header>
                                     <Accordion.Trigger className="AccordionTrigger">
                                         <CardStackMinusIcon className="header-icon" aria-hidden />
@@ -43,7 +47,7 @@ function Course() {
                                     
                                 </Accordion.Content>
                             </Accordion.Item>
-                            <Accordion.Item value="menu-item-skill" className="AccordionItem">
+                            <Accordion.Item value="menu-item-skill" className="AccordionItem" onClick={() => {setPage('Skill')}}>
                                 <Accordion.Header>
                                     <Accordion.Trigger className="AccordionTrigger">
                                         <Crosshair2Icon className="header-icon" aria-hidden />
@@ -51,7 +55,7 @@ function Course() {
                                     </Accordion.Trigger>
                                 </Accordion.Header>
                             </Accordion.Item>
-                            <Accordion.Item value="menu-item-certificates" className="AccordionItem">
+                            <Accordion.Item value="menu-item-certificates" className="AccordionItem" onClick={() => {setPage('Certificates')}}>
                                 <Accordion.Header>
                                     <Accordion.Trigger className="AccordionTrigger">
                                         <IdCardIcon className="header-icon" aria-hidden />
@@ -72,7 +76,9 @@ function Course() {
                         </Flex>
                     </Flex>
                     <Flex id="content">
+                       { page === 'Learn' ? 
                         <Learn/>
+                       : <></>}
                     </Flex>
                 </Flex>
             </Theme>
