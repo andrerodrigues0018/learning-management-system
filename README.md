@@ -14,3 +14,4 @@ Coisas que penso em fazer aqui:
 - Uma adm inteligente
 - ferramentas de progressão ( badges, level)
 - inserir animações 
+- aplicar testes no frontend
